@@ -16,10 +16,6 @@ class Hasher:
         result = (md5(line.encode()).hexdigest() for line in self.file.read().split('\n'))
         return result
 
-    def readline(self):
-        result = (line for line in self.file.read().split('\n'))
-        return result
-
 if __name__ == "__main__":
 
     with Hasher('readme.txt', 'windows-1251') as f:
